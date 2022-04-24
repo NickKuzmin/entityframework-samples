@@ -16,6 +16,7 @@ CREATE TABLE dbo.ArticleSecondTypeTable (
 ) INHERITS (dbo.ArticleCommonTable);
 ```
 
+**Package Manager Console -> EntityFramework.Samples project:**
 ```
 Enable-Migrations -Force
 Add-Migration ArticleContextDBVersion1
