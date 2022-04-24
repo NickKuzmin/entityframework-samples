@@ -19,4 +19,5 @@ CREATE TABLE dbo.ArticleSecondTypeTable (
 ```
 Enable-Migrations -Force
 Add-Migration ArticleContextDBVersion1
+Update-Database -verbose
 ```
