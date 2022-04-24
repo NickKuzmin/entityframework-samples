@@ -15,3 +15,8 @@ CREATE TABLE dbo.ArticleSecondTypeTable (
     ArticleSecondTypeProperty text
 ) INHERITS (dbo.ArticleCommonTable);
 ```
+
+```
+Enable-Migrations -Force
+Add-Migration ArticleContextDBVersion1
+```
