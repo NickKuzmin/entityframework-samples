@@ -1,3 +1,6 @@
+**Code First Migrations:**
+`EntityFramework.Samples\EntityFramework.Samples\Migrations\202204241734090_ArticleContextDBVersion1.cs`
+
 ```
 CREATE SCHEMA IF NOT EXISTS dbo;
 
