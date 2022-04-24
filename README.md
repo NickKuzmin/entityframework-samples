@@ -19,6 +19,10 @@ CREATE TABLE dbo.ArticleSecondTypeTable (
 ) INHERITS (dbo.ArticleCommonTable);
 ```
 ---------------------------------
+**Nuget:**
+- `EntityFramework`
+- `Npgsql.EntityFramework`
+---------------------------------
 **Package Manager Console -> EntityFramework.Samples project:**
 ```
 Enable-Migrations -Force
