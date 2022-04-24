@@ -9,9 +9,9 @@ CREATE TABLE dbo.ArticleCommonTable (
 
 CREATE TABLE dbo.ArticleFirstTypeTable (   
     ArticleFirstTypeProperty text
-) INHERITS (ArticleCommonTable);
+) INHERITS (dbo.ArticleCommonTable);
 
 CREATE TABLE dbo.ArticleSecondTypeTable (   
     ArticleSecondTypeProperty text
-) INHERITS (ArticleCommonTable);
+) INHERITS (dbo.ArticleCommonTable);
 ```
