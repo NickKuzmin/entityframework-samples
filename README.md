@@ -1,6 +1,6 @@
 **Code First Migrations:**
-`EntityFramework.Samples\EntityFramework.Samples\Migrations\202204241734090_ArticleContextDBVersion1.cs`
-
+- `EntityFramework.Samples\EntityFramework.Samples\Migrations\202204241734090_ArticleContextDBVersion1.cs`
+---------------------------------
 ```
 CREATE SCHEMA IF NOT EXISTS dbo;
 
@@ -18,7 +18,7 @@ CREATE TABLE dbo.ArticleSecondTypeTable (
     ArticleSecondTypeProperty text
 ) INHERITS (dbo.ArticleCommonTable);
 ```
-
+---------------------------------
 **Package Manager Console -> EntityFramework.Samples project:**
 ```
 Enable-Migrations -Force
