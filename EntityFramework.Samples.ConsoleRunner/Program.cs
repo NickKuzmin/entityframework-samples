@@ -12,7 +12,6 @@ namespace EntityFramework.Samples.ConsoleRunner
             {
                 var articleFirstTypeTable = new ArticleFirstTypeTable
                 {
-                    Id = 1,
                     ArticleTitle = "Article title for First type",
                     Type = "FirstType",
                     ArticleFirstTypeProperty = "Additional Property for First type"
@@ -20,7 +19,6 @@ namespace EntityFramework.Samples.ConsoleRunner
 
                 var articleSecondTypeTable = new ArticleSecondTypeTable
                 {
-                    Id = 1,
                     ArticleTitle = "Article title for Second type",
                     Type = "SecondType",
                     ArticleSecondTypeProperty = "Additional Property for Second type"
@@ -36,6 +34,21 @@ namespace EntityFramework.Samples.ConsoleRunner
                 var articleCommonTables = context.ArticleCommonTables.ToArray();
                 var articleFirstTypes = context.ArticleFirstTypes.ToArray();
                 var articleSecondTypes = context.ArticleSecondTypes.ToArray();
+            }
+
+            using (var context = new ArticleContext())
+            {
+                var groupingQuery = from article in context.ArticleCommonTables
+                    group article by article.Type
+                    into g
+                    select new
+                    {
+                        Key = g.Key,
+                        Array = g.Select(x => x),
+                        Grouping = g
+                    };
+
+                var grouping = groupingQuery.ToArray();
             }
         }
     }
